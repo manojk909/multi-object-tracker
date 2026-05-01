@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Model weights (auto-downloaded)
+*.pt
+*.onnx
+*.engine
+
+# Output files
+output/
+logs/
+downloads/
+*.mp4
+*.avi
+*.csv
+*.json
+
+# Temp
+*.tmp*
+*.tmp_mux*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Hugging Face / Gradio cache
+gradio_cached_examples/
+__pycache__/
