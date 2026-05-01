@@ -7,7 +7,7 @@ sdk: gradio
 app_file: app.py
 pinned: false
 license: mit
-short_description: YOLOv8 + ByteTrack multi-object tracking with audio preservation
+short_description: YOLOv8-based real-time multi-object tracking
 ---
 
 
