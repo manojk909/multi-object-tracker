@@ -2,25 +2,33 @@
 title: Multi-Object Detection and Tracking
 emoji: 🎯
 colorFrom: green
-colorTo: emerald
+colorTo: blue
 sdk: gradio
-sdk_version: "4.20.0"
 app_file: app.py
 pinned: false
 license: mit
+short_description: YOLOv8 + ByteTrack multi-object tracking with audio preservation
 ---
+
+
 
 # 🎯 Multi-Object Detection & Tracking Pipeline
 
 A production-ready, end-to-end Python pipeline for **detecting**, **tracking**, and **annotating** multiple objects in video — with **audio preserved** in the output.
 
-🔗 **Live Demo**: [Hugging Face Spaces](https://huggingface.co/spaces/YOUR_USERNAME/multi-object-tracker)
+🔗 **Live Demo**: [Hugging Face Spaces](https://huggingface.co/spaces/mk909/multi-object-tracker)
+
+---
+
+## 💡 Motivation
+
+This project demonstrates real-time multi-object tracking using modern detection + tracking pipelines, solving challenges like occlusion, ID switching, and audio preservation — common in surveillance, sports analytics, and autonomous systems.
 
 ---
 
 ## 📸 Features
 
-- **YOLOv8 / YOLO11** object detection (nano → extra-large variants)
+- **YOLOv8 (Ultralytics)** object detection (nano → extra-large variants)
 - **ByteTrack** (default) and **DeepSORT** multi-object tracking
 - **Stable cross-frame IDs** with occlusion handling
 - **Motion trail visualization** — fading path per object
@@ -73,7 +81,7 @@ multi_object_tracker/
 ### Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/multi-object-tracker.git
+git clone https://github.com/manojk909/multi-object-tracker.git
 cd multi-object-tracker
 
 python -m venv .venv
@@ -158,6 +166,12 @@ python main.py --video myvideo.mp4 --no-audio
 ```
 frame_id, track_id, class_id, class_name, x1, y1, x2, y2, confidence
 ```
+
+---
+
+## 🎥 Demo
+
+![Demo](demo.gif)
 
 ---
 
@@ -253,3 +267,6 @@ annotated  = annotator.annotate(frame_bgr, tracked, fps=30.0, frame_id=42)
 ## 📄 License
 
 MIT
+=======
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
