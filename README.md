@@ -10,19 +10,41 @@ license: mit
 short_description: YOLOv8-based real-time multi-object tracking
 ---
 
+## 📦 Deliverables
+
+All required deliverables for this project have been compiled and organized in a single Google Drive folder.
+
+🔗 **Access Link:** [View Deliverables Folder](https://drive.google.com/drive/folders/18KJAKRtE4ee6vkw-0r31TAGtJA73-e_6?usp=sharing)
+
+The folder includes:
+- Annotated output video
+- Original public video
+- Short technical report
+- Sample screenshots of results
+- Short demo video (3–5 minutes) explaining the approach
 
 
 # 🎯 Multi-Object Detection & Tracking Pipeline
 
 A production-ready, end-to-end Python pipeline for **detecting**, **tracking**, and **annotating** multiple objects in video — with **audio preserved** in the output.
 
-🔗 **Live Demo**: [Hugging Face Spaces](https://huggingface.co/spaces/mk909/multi-object-tracker)
+🔗 **Live Demo**: [Multi Object Tracker](https://huggingface.co/spaces/mk909/multi-object-tracker)
 
 ---
 
 ## 💡 Motivation
 
 This project demonstrates real-time multi-object tracking using modern detection + tracking pipelines, solving challenges like occlusion, ID switching, and audio preservation — common in surveillance, sports analytics, and autonomous systems.
+
+---
+
+## 🎥 Demo
+
+<img width="1900" height="852" alt="Screenshot 2026-05-02 105422" src="https://github.com/user-attachments/assets/d536b3b7-ac40-44ca-9a64-c9d9d14ab665" />
+
+<img width="1919" height="860" alt="Screenshot 2026-05-02 110217" src="https://github.com/user-attachments/assets/b55acc7f-ff31-4d75-811e-d3604801aa34" />
+
+<img width="1885" height="852" alt="Screenshot 2026-05-02 110317" src="https://github.com/user-attachments/assets/47211be1-d58a-4b7c-bdda-f854dc49152c" />
 
 ---
 
@@ -169,12 +191,6 @@ frame_id, track_id, class_id, class_name, x1, y1, x2, y2, confidence
 
 ---
 
-## 🎥 Demo
-
-![Demo](demo.gif)
-
----
-
 ## 🔊 Audio Preservation (Fix)
 
 OpenCV's `VideoWriter` cannot write audio streams — it always produces silent video.
@@ -260,7 +276,7 @@ annotated  = annotator.annotate(frame_bgr, tracked, fps=30.0, frame_id=42)
 3. Choose **Gradio** SDK, link your GitHub repo
 4. HF Spaces reads `packages.txt` → installs `ffmpeg` automatically
 5. Reads `requirements.txt` → installs Python deps
-6. Launches `app.py` — your app is live at `https://huggingface.co/spaces/YOUR_USERNAME/SPACE_NAME`
+6. Launches `app.py` — your app is live at `https://huggingface.co/spaces/mk909/multi-object-tracker`
 
 ---
 
